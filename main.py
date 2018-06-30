@@ -27,9 +27,11 @@ predict_dt = clf1.predict(X)
 predict_svm = clf2.predict(X)
 predict_knn = clf3.predict(X)
 
-accuracy_dt = accuracy_score(Y,predict_dt)
-accuracy_svm = accuracy_score(Y,predict_svm)
-accuracy_knn = accuracy_score(Y,predict_knn)
+accuracy_dt = accuracy_score(Y, predict_dt)
+accuracy_svm = accuracy_score(Y, predict_svm)
+accuracy_knn = accuracy_score(Y, predict_knn)
 
 
-print(np.max([accuracy_dt,accuracy_knn,accuracy_svm]))
+accuracy = np.argmax([accuracy_dt, accuracy_knn, accuracy_svm])
+
+print("highest accuracy is: ", accuracy)
